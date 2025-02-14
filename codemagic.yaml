@@ -1,0 +1,11 @@
+workflows:
+  pwa-to-mobile:
+    name: Convert PWA to Mobile App
+    instance_type: mac_mini
+    environment:
+      vars:
+        PACKAGE_NAME: "com.example.pwaapp"
+    scripts:
+      - echo "Building PWA into a mobile package..."
+    artifacts:
+      - "build/**"
